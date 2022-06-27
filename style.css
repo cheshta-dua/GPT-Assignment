@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Raleway:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    background-color: #f1f1f1;
+    color: #191919;
+    /* float: left; */
+}
+
+.content {
+    margin-left: 10%;
+}
+
+.sidebar, .sidebarTitle, .menu, .socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar {
+    justify-content: space-between;
+    width: 10%;
+    height: 100%;
+    color: #2A2A2A;
+    position: fixed;
+    border-right: 1px solid #191919;
+    padding: 2rem 0rem;
+}
+
+.sidebarTitle {
+    font-size: 1.2rem;
+}
+
+.Lname {
+    font-weight: 700;
+}
+
+.menu {
+    gap: 2rem;
+}
+
+.menuTitle {
+    transform: rotate(-90deg);
+    padding-left: 4rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.line {
+    width: 0.5px;
+    height: 100px;
+    background-color: #191919;
+}
+
+.socials {
+    gap: 1.4rem;
+    padding-bottom: 3rem;
+    cursor: pointer;
+}
+
+.socials a {
+    color: #191919;
+}
+
+.hero {
+    background-color: #2A2A2A;
+    color: #F1F1F1;
+    height: 100vh;
+    padding: 2rem;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 3.5vw;
+    padding-bottom: 1.3rem;
+}
+
+.desc {
+    font-size: 2vw;
+    line-height: 2.5vw;
+    /* width: 50%; */
+    padding-bottom: 2rem;
+}
+
+.heroBtn {
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #f1f1f1;
+    color: #f1f1f1;
+    font-size: 1vw;
+    padding: 0.8rem 1.2rem;
+    border-radius: 30px;
+}
+
+.heroBtn:hover {
+    color: #2A2A2A;
+    background-color: #f1f1f1;
+}
+
+.heroImg{
+    width: 50%;
+}
