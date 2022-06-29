@@ -118,7 +118,6 @@ small {
 .hero {
     background-color: #2A2A2A;
     color: #F1F1F1;
-    height: 100vh;
     padding: 2rem;
     padding-bottom: 0;
     display: flex;
@@ -127,21 +126,20 @@ small {
     align-items: center;
 }
 
-.title {
+.heroTitle {
     text-transform: capitalize;
     font-weight: 700;
     font-size: 3.5vw;
     padding-bottom: 1.3rem;
 }
 
-.desc {
+.heroDesc {
     font-size: 2vw;
     line-height: 2.5vw;
-    /* width: 50%; */
     padding-bottom: 2rem;
 }
 
-.connectBtn {
+.darkBtn {
     cursor: pointer;
     background-color: transparent;
     border: 2px solid #f1f1f1;
@@ -151,7 +149,7 @@ small {
     border-radius: 30px;
 }
 
-.connectBtn:hover {
+.darkBtn:hover {
     color: #2A2A2A;
     background-color: #f1f1f1;
 }
@@ -168,11 +166,14 @@ small {
     justify-content: center;
 }
 
-.light .title, .light2 .title, .light3 .title {
+.title {
+    font-weight: 700;
+    padding-bottom: 1.3rem;
     font-size: 1.8vw;
 }
 
-.light .desc, .light3 .desc {
+.desc {
+    padding-bottom: 2rem;
     font-family: 'Inter', sans-serif;
     font-size: 1.1vw;
     line-height: 2vw;
@@ -185,12 +186,17 @@ small {
     margin: 1rem;
 }
 
-.light .connectBtn, .light2 .connectBtn, .light3 .connectBtn {
+.lightBtn {
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 1vw;
+    padding: 0.8rem 1.2rem;
+    border-radius: 30px;
     color: #2A2A2A;
     border: 2px solid #2A2A2A;
 }
 
-.light .connectBtn:hover, .light2 .connectBtn:hover, .light3 .connectBtn:hover {
+.lightBtn:hover {
     background-color: #2A2A2A;
     color: #F1F1F1;
 }
@@ -214,10 +220,6 @@ small {
     cursor: pointer;
 }
 
-.light2, .light3 {
-    padding: 2rem;
-}
-
 .books {
     display: flex;
     align-items: center;
@@ -230,11 +232,11 @@ small {
     padding-bottom: 1rem;
 }
 
-.light3 .desc {
+.light3 .contentBox .desc {
     width: 70%;
 }
 
-.light3 .imgs {
+.imgs {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -242,11 +244,11 @@ small {
     padding-bottom: 1rem;
 }
 
-.light3 img:first-child {
+.imgs img:first-child {
     width: 35%;
 }
 
-.light3 img:nth-child(2) {
+.imgs img:nth-child(2) {
     width: 60%;
 }
 
@@ -312,6 +314,7 @@ small {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    border-top: 1px solid #F1F1F1;
 }
 
 .readBtn {
@@ -387,7 +390,7 @@ small {
 }
 
 .insta {
-    padding: 4rem;
+    padding: 2rem;
 }
 
 .circle {
@@ -410,7 +413,7 @@ small {
 .insta .title {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
     margin-right: 2rem;
 }
 
@@ -418,16 +421,6 @@ small {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 1vw;
-}
-
-.insta .connectBtn {
-    color: #2A2A2A;
-    border-color: #2A2A2A;
-}
-
-.insta .connectBtn:hover {
-    color: #F1F1F1;
-    background-color: #2A2A2A;
 }
 
 .pix {
@@ -451,9 +444,10 @@ small {
     flex-direction: row;
     color: #F1F1F1;
     align-items: center;
+    justify-content: space-between;
 }
 
-.form{
+.form {
     padding: 2rem 0rem;
 }
 
@@ -461,6 +455,7 @@ form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    padding-right: 2rem;
 }
 
 .form .title {
@@ -482,13 +477,172 @@ form {
     padding: 1vw;
 }
 
-.btn{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-::placeholder{
+::placeholder {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
+}
+
+.contentBox {
+    padding: 2rem;
+}
+
+.light2 .topSection .title, .light3 .topSection .title {
+    width: 20%;
+}
+
+@media only screen and (max-width: 850px) {
+    .lightBtn, .darkBtn {
+        font-size: 1.5vw;
+        padding: 0.6rem 1rem;
+    }
+
+    .sidebarTitle, .menuTitle {
+        font-size: 2vw;
+    }
+
+    .desc {
+        font-size: 1.7vw;
+        line-height: 2.3vw;
+    }
+
+    .para {
+        font-size: 1.3vw;
+    }
+
+    .arrows i {
+        padding: 0.5rem;
+        font-size: smaller;
+    }
+
+    .socials a {
+        font-size: smaller;
+    }
+
+    .light {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .light img {
+        margin: 0.5rem 0rem;
+        width: 100%;
+    }
+
+    .contentBox {
+        padding-top: 0;
+    }
+
+    .light3 .contentBox .desc {
+        width: 100%;
+    }
+
+    .insta .top {
+        margin-bottom: 1rem;
+    }
+
+    .pix {
+        gap: 1rem 0.5rem;
+    }
+
+    #field {
+        border-radius: 2px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .light, .insta, .hero {
+        padding: 1rem;
+    }
+
+    .desc, .title {
+        padding-bottom: 0.5rem;
+    }
+
+    .lightBtn, .darkBtn {
+        font-size: 1.8vw;
+        padding: 0.2rem 0.5rem;
+    }
+
+    .lightBtn {
+        border: 1px solid #2A2A2A;
+    }
+
+    .darkBtn {
+        border: 1px solid #F1F1F1;
+    }
+
+    .contentBox {
+        padding: 0rem 1rem;
+    }
+
+    .topSection {
+        padding: 1rem;
+        padding-bottom: 0.2rem;
+    }
+
+    .btns {
+        padding-bottom: 0.3rem;
+    }
+
+    .topSection hr {
+        visibility: hidden;
+    }
+
+    .title {
+        font-size: 2.2vw;
+        width: 100%;
+    }
+
+    .desc {
+        font-size: 1.8vw;
+    }
+
+    .para {
+        font-size: 1.6vw;
+        line-height: 2vw;
+    }
+
+    .arrows i {
+        padding: 0.2rem;
+        font-size: x-small;
+    }
+
+    .socials a {
+        font-size: x-small;
+    }
+
+    .blog1, .blogCards {
+        margin: 1rem;
+    }
+
+    .blogCards {
+        padding: 0;
+    }
+
+    .form {
+        padding: 1rem 0rem;
+    }
+
+    .light2 .topSection .title, .light3 .topSection .title {
+        width: 100%;
+    }
+
+    .insta .top {
+        gap: 0.5rem;
+    }
+
+    .circle {
+        width: 5vw;
+        height: 5vw;
+    }
+
+    .insta .title{
+        gap:0.2rem;
+    }
 }

@@ -1,3 +1,8 @@
 document.querySelector(".menuTitle").addEventListener("click", function () {
-    document.getElementById("overlay").style.visibility = 'visible';
+    if (document.getElementById("overlay").style.visibility == 'visible')
+        document.getElementById("overlay").style.visibility = 'hidden';
+    else {
+        document.getElementById("overlay").style.visibility = 'visible';
+    }
+
 })
