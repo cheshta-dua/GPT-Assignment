@@ -95,7 +95,7 @@ body {
     text-decoration: none;
     color: #191919;
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 2vw;
 }
 
 small {
@@ -104,15 +104,16 @@ small {
 
 .overlayInfo {
     font-family: 'Inter', sans-serif;
-    line-height: 1.8rem;
+    line-height: 2vw;
     border-left: 1px solid #191919;
     height: 100%;
     width: 50%;
     padding: 2rem;
     display: flex;
-    align-items: left;
     justify-content: center;
     flex-direction: column;
+    font-size: 1.2vw;
+    background-color: #f1f1f1;
 }
 
 .hero {
@@ -281,13 +282,12 @@ small {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: flex-end;
     border: 1px solid #F1F1F1;
     margin: 1rem 2rem;
-}
-
-.blog1 .img {
-    width: 50%;
+    background-image: url("others/Bridge.png");
+    background-position: left;
+    background-size: 50% 100%;
 }
 
 .blog1 .title {
@@ -296,7 +296,9 @@ small {
 
 .blog1 .txt {
     width: 50%;
-    padding: 0rem 2rem;
+    height: 100%;
+    padding: 1rem;
+    background-color: #2A2A2A;
 }
 
 .para {
@@ -496,6 +498,14 @@ form {
     width: 20%;
 }
 
+.mail, .phno {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: flex-start;
+}
+
 @media only screen and (max-width: 850px) {
     .lightBtn, .darkBtn {
         font-size: 1.5vw;
@@ -513,6 +523,7 @@ form {
 
     .para {
         font-size: 1.3vw;
+        padding-bottom: 1rem;
     }
 
     .arrows i {
@@ -552,6 +563,23 @@ form {
 
     #field {
         border-radius: 2px;
+    }
+
+    .details {
+        padding-top: 0rem;
+    }
+
+    .overlayInfo {
+        padding: 1rem;
+        margin-left: -1rem;
+    }
+
+    .mail, .phno {
+        gap: 0.2rem;
+    }
+
+    .overlayContent {
+        gap: 1rem;
     }
 }
 
@@ -606,6 +634,7 @@ form {
     .para {
         font-size: 1.6vw;
         line-height: 2vw;
+        padding-bottom: 0.5rem;
     }
 
     .arrows i {
@@ -642,7 +671,15 @@ form {
         height: 5vw;
     }
 
-    .insta .title{
-        gap:0.2rem;
+    .insta .title {
+        gap: 0.2rem;
+    }
+
+    .dark .title {
+        width: 100%;
+    }
+
+    .blog1 {
+        margin: 0.1rem 1rem;
     }
 }
